@@ -832,3 +832,17 @@ nav ul{
     margin: 20px 0;
     border-radius: 10px;
 }
+
+.container{
+    width: 70%;
+    margin: 40px auto;
+}
+
+.container img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+Penjelasan
