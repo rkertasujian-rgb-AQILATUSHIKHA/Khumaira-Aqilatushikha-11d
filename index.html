@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Profil Usaha Buku</title>
+        <link rel="stylesheet" href="style.css" />
+</head>
+
+<div class="logo">
+    <img src="logos.jpg" alt="Logo">
+</div>
+
+<body>
+
+<div class="intro">
+  <div class="intro-text">
+    <h1 class="typing">Welcome to Ppulbatu Store</h1>
+    <h3 class="by">By : Khumaira Aqilatushikha</h3>
+  </div>
+</div>
+
+<div class="container">
+    <img src="thum.jpg" alt="thum">
+</div>
+
+   <nav class="navbar">
+  <a href="index.html" class="active">Home</a>
+  <a href="Product.html">Product</a>
+  <a href="Book Breakdown.html">Book Breakdown</a>
+  <a href="Testimonial.html">Testimonial</a>
+  <a href="Buyer Testimonial.html">Buyer Testimonial</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Contact.html">Contact</a>
+</nav>
+
+    <h1>Take a look around — Ppulbatu !</h1>
+    <p>Explore our book products, join the discussions, and hear from our customers.</p>
+    
+    <script>
+setTimeout(function(){
+document.querySelector(".intro").style.display="none";
+document.querySelector(".content").style.display="block";
+},4500);
+</script>
+   
+    <h2>Books We Offer</h2>
+    <p>We provide a wide range of books for all ages, from children to adults. Here are some of the main categories available at Ppulbatu:</p>
+
+<ul>
+    <li><strong>Manga Comics Japanese : </strong>Japanese manga comics with cool art, fun stories, and characters teens can totally relate to.</li>
+    <li><strong>Fiction Novels : </strong>Novels with engaging stories, relatable characters, and plots that keep you hooked from start to finish.</li>
+    <li><strong>Kids Storyland : </strong>A fun story world filled with colorful books, exciting adventures, and lovable characters for kids.</li>
+    <li><strong>Mind-Opening Novels : </strong>Novels that open your mind with meaningful stories, fresh perspectives, and insights that inspire you to think deeper.</li>
+    <li><strong>Journey Through Stories : </strong>A journey through stories that take you to new worlds, spark imagination, and leave lasting impressions.</li>
+</ul>
+
+<footer class="footer">
+© 2026 Ppulbatu Book Store — All rights reserved
+</footer>
+
+<a href="#" class="back-top">↑</a>
+
+
+<script>
+
+if(sessionStorage.getItem("visited")){
+document.querySelector(".intro").style.display="none";
+document.querySelector(".content").style.display="block";
+}else{
+
+sessionStorage.setItem("visited","true");
+
+setTimeout(function(){
+
+document.querySelector(".intro").style.opacity="0";
+
+setTimeout(function(){
+document.querySelector(".intro").style.display="none";
+document.querySelector(".content").style.display="block";
+
+setTimeout(function(){
+document.querySelector(".content").style.opacity="1";
+},100);
+
+},1000);
+
+},8500);
+
+}
+
+</script>
+
+</body>
+</html>
+

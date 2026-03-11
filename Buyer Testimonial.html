@@ -1,0 +1,79 @@
+<html lang="id">
+    
+<head> <meta charset="UTF-8" />
+           <meta name="viewport" content="width=device-width,initial-scale1.0" />
+           <title>Book Breakdown Ppulbatu !</title>
+           <link rel="stylesheet" href="style.css" /> </head>
+<body>
+
+  <div class="logo">
+    <img src="logoh.jpg" alt="Logo">
+</div>
+
+<div class="container">
+    <img src="thum.jpg" alt="thum">
+</div>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="Product.html">Product</a>
+  <a href="Book Breakdown.html">Book Breakdown</a>
+  <a href="Testimonial.html">Testimonial</a>
+  <a href="Buyer Testimonial.html" class="active">Buyer Testimonial</a>
+  <a href="Event.html">Event</a>
+  <a href="Contact.html">Contact</a>
+</nav>
+
+</header>
+
+<h1>Buyer Testimonial Ppulbatu !</h1>
+
+<main class="formulir">
+  <div id="testimonialList"></div>
+
+<button id="removeAll" class="remove-all">Remove All</button>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Ppulbatu House</p>
+</footer>
+
+<footer class="footer">
+  © 2026 Ppulbatu Book Store — All rights reserved
+</footer>
+
+<a href="#" class="back-top">↑</a>
+
+<script>
+  const container = document.getElementById('testimonialList');
+
+  const testimoniList =
+    JSON.parse(localStorage.getItem('testimoniList')) || [];
+
+  if (testimoniList.length === 0) {
+    container.innerHTML = "<p>No reviews yet, so tell ur testimonial viewers !</p>";
+  } else {
+    testimoniList.forEach((t, i) => {
+      const el = document.createElement('div');
+      el.className = 'testimoni-box';
+
+      el.innerHTML = `
+  <p><strong>Name:</strong> ${t.name}</p>
+  <p><strong>Email:</strong> ${t.email}</p>
+  <p><strong>Book Purchased:</strong> ${t.book}</p>
+  <p><strong>Message:</strong> ${t.message}</p>
+  <p><strong>Rate:</strong> ⭐ ${t.rate}/5</p>
+`;
+      container.appendChild(el);
+    });
+  }
+
+  document.getElementById("removeAll").addEventListener("click", function () {
+    const konfirmasi = confirm("Do you really want to delete all testimonials?");
+    if (konfirmasi) {
+      localStorage.removeItem("testimoniList");
+      location.reload();
+    }
+  });
+</script>

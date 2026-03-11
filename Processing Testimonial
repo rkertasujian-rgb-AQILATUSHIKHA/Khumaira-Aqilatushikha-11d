@@ -1,0 +1,42 @@
+<html lang="id">
+    <head> <meta charset="UTF-8" />
+           <meta name="viewport" content="width=device-width,initial-scale1.0" />
+           <title>Book Breakdown Ppulbatu !</title>
+           <link rel="stylesheet" href="style.css" /> </head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="Product.html">Product</a>
+  <a href="Book Breakdown.html">Book Breakdown</a>
+  <a href="Testimonial.html">Testimonial</a>
+  <a href="Buyer Testimonial.html" class="active">Buyer Testimonial</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Contact.html">Contact</a>
+</nav>
+
+</header>
+
+<h1>Buyer Testimonial Ppulbatu !</h1>
+
+<main class="confirmation">
+  <h2>MAny thanks!</h2>
+  <h2>Ur testimonial has been successfully submitted.</h2>
+  <h2><a href="Buyer Testimonial.html">See testimonials</a></h2>
+  <section class="testimonial-submitted"></section>
+  <a href="Testimonial.html">Write another testimonial</a>
+</main>
+
+<footer>
+    <p>&copy; 2026 Ppulbatu House</p>
+</footer>
+
+<footer class="footer">
+  © 2026 Ppulbatu Book Store — All rights reserved
+</footer>
+
+  </body>
+
+<a href="#" class="back-top">↑</a>
+
+</html>

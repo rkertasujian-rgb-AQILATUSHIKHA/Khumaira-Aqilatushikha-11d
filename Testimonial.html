@@ -1,0 +1,98 @@
+<html lang="id">
+    
+    <head> <meta charset="UTF-8" />
+           <meta name="viewport" content="width=device-width,initial-scale1.0" />
+           <title>Book Breakdown Ppulbatu !</title>
+           <link rel="stylesheet" href="style.css" /> </head>
+<body>
+
+  <div class="logo">
+    <img src="logot.jpg" alt="Logo">
+</div>
+
+<div class="container">
+    <img src="thum.jpg" alt="thum">
+</div>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="Product.html">Product</a>
+  <a href="Book Breakdown.html">Book Breakdown</a>
+  <a href="Testimonial.html" class="active">Testimonial</a>
+  <a href="Buyer Testimonial.html">Buyer Testimonial</a>
+  <a href="Contact.html">Contact</a>
+  <a href="Contact.html">Contact</a>
+</nav>
+
+
+<h1>Feedback Customers Ppulbatu !</h1>
+
+<main class="Form">
+    <h2>Ur opinion matters tell us !</h2>
+    <form id="FormTestimonial">
+
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" required placeholder="Full Name">
+
+<label for="from">School / Institution / Community:</label>
+<input type="text" id="school" name="from" required placeholder="ex : Sopha High School">
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required placeholder="email@example.com">
+
+<label for="book">Books Purchased:</label>
+<input type="text" id="book" name="book" required placeholder="Item Purchased">
+
+<label for="message">Ur Opinion:</label>
+<textarea id="message" name="message" required placeholder="Tell ur Oppinion !" rows="5"></textarea>
+
+<label for="rate">Rate (1 to 5):</label>
+<input type="number" id="rate" name="rate" min="1" max="5" required placeholder="My 05 Stars">
+
+<button type="submit">Send Testimonial</button>
+    </form>
+
+
+<main class="Form">
+
+  <div class="image-wrapper">
+    <img src="paid.jpg" alt="Decorative Image">
+  </div>
+
+</main>
+
+<a href="#" class="back-top">↑</a>
+
+<footer>
+    <p>&copy; 2026 Ppulbatu House</p>
+</footer>
+
+  <footer class="footer">
+  © 2026 Ppulbatu Book Store — All rights reserved
+</footer>
+
+<script>
+  document.getElementById('FormTestimonial').addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const school = document.getElementById('school').value;
+  const email = document.getElementById('email').value;
+  const book = document.getElementById('book').value;
+  const message = document.getElementById('message').value;
+  const rate = document.getElementById('rate').value;
+
+  const dataBaru = { name, school, email, book, message, rate };
+
+  const testimoniList =
+    JSON.parse(localStorage.getItem('testimoniList')) || [];
+
+  testimoniList.push(dataBaru);
+
+  localStorage.setItem('testimoniList', JSON.stringify(testimoniList));
+
+  window.location.href = 'Buyer Testimonial.html';
+});
+
+</script>
+
